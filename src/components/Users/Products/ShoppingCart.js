@@ -74,7 +74,8 @@ export default function ShoppingCart() {
 
             <ul
               role="list"
-              className="divide-y divide-gray-200 border-t border-b border-gray-200">
+              className="divide-y divide-gray-200 border-t border-b border-gray-200"
+            >
               {cartItems?.map((product) => (
                 <li key={product._id} className="flex py-6 sm:py-10">
                   <div className="flex-shrink-0">
@@ -119,7 +120,8 @@ export default function ShoppingCart() {
                               e.target.value
                             )
                           }
-                          className="max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+                          className="max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                        >
                           {/* use the qty  */}
 
                           {[...Array(product?.qtyLeft)?.keys()]?.map((x) => {
@@ -136,7 +138,8 @@ export default function ShoppingCart() {
                             onClick={() =>
                               removeOrderItemQtyHandler(product?._id)
                             }
-                            className="-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500">
+                            className="-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500"
+                          >
                             <span className="sr-only">Remove</span>
                             <XMarkIcon className="h-5 w-5" aria-hidden="true" />
                           </button>
@@ -152,10 +155,12 @@ export default function ShoppingCart() {
           {/* Order summary */}
           <section
             aria-labelledby="summary-heading"
-            className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
+            className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+          >
             <h2
               id="summary-heading"
-              className="text-lg font-medium text-gray-900">
+              className="text-lg font-medium text-gray-900"
+            >
               Order summary
             </h2>
 
@@ -216,7 +221,8 @@ export default function ShoppingCart() {
                 state={{
                   sumTotalPrice,
                 }}
-                className="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">
+                className="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+              >
                 Proceed to Checkout
               </Link>
             </div>
